@@ -2,19 +2,19 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Routes } from 'react-router-dom'
 import { Router } from 'react-router-dom'
-import { NavBars } from '../components/NavBars'
-import { Footers } from '../components/Footers'
-import { Home } from '../pages/Home'
+import NavBar  from '../components/NavBar'
+import  Footer  from '../components/Footer'
+import { About } from '../pages/About'
 import { Login } from '../pages/Login'
 import { Register } from '../pages/Register'
 import { PrivateRouter } from './PrivateRouter'
-import { PostDetail } from '../pages/PostDetail'
+import { Detail } from '../pages/Detail'
 
 export const AppRouter = () => {
   return (
 
     <>
-    <NavBars/>
+    <NavBar/>
     
 
         <Routes>
@@ -23,12 +23,12 @@ export const AppRouter = () => {
             <Route path='register' element={<Register/>}/>
 
             <Route element={<PrivateRouter/>}>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/detail/:id' element={<PostDetail/>}/>
+            <Route path='/' element={<About/>}/>
+            <Route path='/detail/:id' element={<Detail/>}/>
             </Route>
         </Routes>
 
-    <Footers/>
+    <Footer/>
     </>
   )
 }

@@ -9,7 +9,7 @@ import  Login  from '../pages/Login'
 import { Register } from '../pages/Register'
 import { PrivateRouter } from './PrivateRouter'
 import { Detail } from '../pages/Detail'
-import { Dashboard } from '@mui/icons-material'
+import Dashboard  from '../pages/Dashboard'
 
 export const AppRouter = () => {
   return (

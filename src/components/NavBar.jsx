@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Link } from "react-router-dom";
 
 const pages = ["Dashboard", "New Blog", "About"];
 const settings = ["Login", "Logout"];
@@ -150,8 +151,10 @@ function NavBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
                   <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                </Link>
+              </MenuItem>
               ))}
             </Menu>
           </Box>

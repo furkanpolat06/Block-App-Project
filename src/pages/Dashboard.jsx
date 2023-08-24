@@ -15,6 +15,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 const ExpandMore = styled((props) => {
@@ -41,6 +42,7 @@ export default function Dashboard() {
   };
 
   return (
+    
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
@@ -81,7 +83,7 @@ export default function Dashboard() {
           aria-expanded={expanded}
           aria-label="show more"
         >
-          <ExpandMoreIcon />
+        <Button variant="contained">Read More</Button>
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
